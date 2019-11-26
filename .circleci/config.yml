@@ -1,0 +1,14 @@
+# Python CircleCI 2.0 configuration file
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:2.7
+
+    working_directory: ~/repo
+
+    steps:
+      - run:
+          name: run tests
+          command: |
+            ./openedx-caliper-tracking/openedx_caliper_tracking/tests/local_test_script.sh
