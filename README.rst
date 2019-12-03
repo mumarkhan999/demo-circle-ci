@@ -8,6 +8,7 @@ Description
 
 Open edX Caliper Tracking can be used to transform the edX traditional event logs into `Caliper Analytics Specifications <https://www.imsglobal.org/activity/caliper>`_ provided by `IMS Global <http://imsglobal.org>`_. Generated logs can be consumed by any analytics application which is compatible with Caliper Standard.
 
+
 Installation
 ############
 

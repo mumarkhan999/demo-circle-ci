@@ -1,0 +1,19 @@
+# Python CircleCI 2.0 configuration file
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:2.7
+
+    working_directory: ~/openedx-caliper-tracking
+
+    steps:
+      - checkout
+      - run: # test what branch we're on.
+          name: "What branch am I on?"
+          command: echo ${CIRCLE_BRANCH}
+      - run:
+          name: run tests
+          command: |
+            cd ..
+            ./openedx-caliper-tracking/openedx_caliper_tracking/tests/local_test_script.sh
